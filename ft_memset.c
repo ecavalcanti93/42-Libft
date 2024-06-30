@@ -14,8 +14,8 @@
 /*Preenche os primeiros 'len' bytes da memória apontada por b com o valor c*/
 void    *ft_memset(void *b, int c, site_t len)
 {
-    unsigned char   *s; /* ponteiro temporario*/
-    site_t  i;
+    unsigned char   *s; /*pont temporario para manipular os bytes da memória*/
+    site_t  i; /*Declara uma variável para o índice do loop*/
 
     i = 0;
     s = b; /* Atribuir o ponteiro b ao ponteiro s*/
