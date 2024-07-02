@@ -17,5 +17,30 @@ A função memmove retorna o valor original de dst*/
 
 void    *ft_memmove(void *dst, const void *src, size_t len)
 {
-    
+    unsigned char    *tmp_src; // Ponteiro temporario
+    unsigned char    *tmp_dst; // Ponteiro temporario
+    size_t  i;
+
+    if (!dst && !src) // Se são NULL, retorna NULL
+        return (NULL);
+    /*Atribuir os valores convertidos aos ponteiros para não alterar
+    o valor original. */
+    tmp_src = (unsigned char *)src;
+    tmp_dst = (unsigned char *)dst;
+    i = 0;
+    /*Se dst for maior que src, copiar do fim para o inicio*/
+    if (tmp_dst > tmp_src)
+    {
+        while (len-- > 0)
+            tmp_dst[len] = tmp_src[len];
+    }
+    else
+    {
+        while (i < len) // Se não for, copiar normalmente
+        {
+            tmp_dst[i] = tmp_src[i];
+            i++;
+        }
+    }
+    return (dst);
 }

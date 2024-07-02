@@ -12,7 +12,7 @@
 
 #include "libft.h"
 /*Preenche os primeiros 'len' bytes da memória apontada por b com o valor c*/
-void    *ft_memset(void *b, int c, site_t len)
+void    *ft_memset(void *b, int c, size_t len)
 {
     unsigned char   *s; /*pont temporario para manipular os bytes da memória*/
     site_t  i; /*Declara uma variável para o índice do loop*/
